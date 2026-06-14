@@ -1,0 +1,494 @@
+{
+  "AES-128-GCM": [
+    {
+      "ad_size": 8,
+      "pt_size": 16,
+      "enc_time_us": 592.45163,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 3.5191626822,
+          "dec_energy_uj": 3.4595290323,
+          "enc_energy_nj_per_byte": 219.94766763750002
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 19.906374768000003,
+          "dec_energy_uj": 19.569053112000002,
+          "enc_energy_nj_per_byte": 1244.148423
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 15.166761728,
+          "dec_energy_uj": 14.909754752000001,
+          "enc_energy_nj_per_byte": 947.9226080000001
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 132.70916512000002,
+          "dec_energy_uj": 130.46035408,
+          "enc_energy_nj_per_byte": 8294.322820000001
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 32,
+      "enc_time_us": 779.961195,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 4.6329694983,
+          "dec_energy_uj": 4.6939262238,
+          "enc_energy_nj_per_byte": 144.780296821875
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 26.206696152,
+          "dec_energy_uj": 26.551501872,
+          "enc_energy_nj_per_byte": 818.95925475
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 19.967006592,
+          "dec_energy_uj": 20.229715712,
+          "enc_energy_nj_per_byte": 623.968956
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 174.71130768,
+          "dec_energy_uj": 177.01001247999997,
+          "enc_energy_nj_per_byte": 5459.728365
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 64,
+      "enc_time_us": 1163.86143,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 6.9133368941999995,
+          "dec_energy_uj": 6.892873564500001,
+          "enc_energy_nj_per_byte": 108.020888971875
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 39.105744048,
+          "dec_energy_uj": 38.989991880000005,
+          "enc_energy_nj_per_byte": 611.02725075
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 29.794852608,
+          "dec_energy_uj": 29.706660480000007,
+          "enc_energy_nj_per_byte": 465.544572
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 260.70496032,
+          "dec_energy_uj": 259.9332792,
+          "enc_energy_nj_per_byte": 4073.5150049999997
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 128,
+      "enc_time_us": 1941.13047,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 11.530314991800001,
+          "dec_energy_uj": 11.4500924109,
+          "enc_energy_nj_per_byte": 90.08058587343751
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 65.221983792,
+          "dec_energy_uj": 64.768199496,
+          "enc_energy_nj_per_byte": 509.54674837500005
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 49.692940032,
+          "dec_energy_uj": 49.347199616,
+          "enc_energy_nj_per_byte": 388.22609400000005
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 434.81322528000004,
+          "dec_energy_uj": 431.78799663999996,
+          "enc_energy_nj_per_byte": 3396.9783225
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 256,
+      "enc_time_us": 3515.919265,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 20.8845604341,
+          "dec_energy_uj": 20.839719671100003,
+          "enc_energy_nj_per_byte": 81.58031419570312
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 118.134887304,
+          "dec_energy_uj": 117.881242584,
+          "enc_energy_nj_per_byte": 461.46440353125
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 90.007533184,
+          "dec_energy_uj": 89.814280064,
+          "enc_energy_nj_per_byte": 351.5919265
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 787.56591536,
+          "dec_energy_uj": 785.87495056,
+          "enc_energy_nj_per_byte": 3076.429356875
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 512,
+      "enc_time_us": 6622.54295,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 39.337905123000006,
+          "dec_energy_uj": 39.2689843425,
+          "enc_energy_nj_per_byte": 76.83184594335938
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 222.51744312000002,
+          "dec_energy_uj": 222.1275882,
+          "enc_energy_nj_per_byte": 434.60438109375
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 169.53709952000003,
+          "dec_energy_uj": 169.24006720000003,
+          "enc_energy_nj_per_byte": 331.12714750000004
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 1483.4496207999998,
+          "dec_energy_uj": 1480.850588,
+          "enc_energy_nj_per_byte": 2897.362540625
+        }
+      }
+    }
+  ],
+  "ASCON-128": [
+    {
+      "ad_size": 8,
+      "pt_size": 16,
+      "enc_time_us": 97.766175,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 0.5807310795,
+          "dec_energy_uj": 0.5558263227,
+          "enc_energy_nj_per_byte": 36.295692468750005
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 3.2849434800000004,
+          "dec_energy_uj": 3.144068088,
+          "enc_energy_nj_per_byte": 205.30896750000002
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 2.5028140800000003,
+          "dec_energy_uj": 2.395480448,
+          "enc_energy_nj_per_byte": 156.42588
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 21.8996232,
+          "dec_energy_uj": 20.96045392,
+          "enc_energy_nj_per_byte": 1368.72645
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 32,
+      "enc_time_us": 119.2267,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 0.708206598,
+          "dec_energy_uj": 0.7203301677,
+          "enc_energy_nj_per_byte": 22.1314561875
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 4.00601712,
+          "dec_energy_uj": 4.074594888000001,
+          "enc_energy_nj_per_byte": 125.188035
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 3.05220352,
+          "dec_energy_uj": 3.1044532480000004,
+          "enc_energy_nj_per_byte": 95.38136
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 26.7067808,
+          "dec_energy_uj": 27.163965920000003,
+          "enc_energy_nj_per_byte": 834.5869
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 64,
+      "enc_time_us": 167.03414,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 0.9921827916000001,
+          "dec_energy_uj": 0.9604007622,
+          "enc_energy_nj_per_byte": 15.502856118750001
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 5.612347104,
+          "dec_energy_uj": 5.432569968,
+          "enc_energy_nj_per_byte": 87.6929235
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 4.276073984000001,
+          "dec_energy_uj": 4.1391009279999995,
+          "enc_energy_nj_per_byte": 66.81365600000001
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 37.41564736,
+          "dec_energy_uj": 36.21713312,
+          "enc_energy_nj_per_byte": 584.61949
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 128,
+      "enc_time_us": 255.29381,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 1.5164452314000003,
+          "dec_energy_uj": 1.5472804842000003,
+          "enc_energy_nj_per_byte": 11.847228370312502
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 8.577872016,
+          "dec_energy_uj": 8.752293648,
+          "enc_energy_nj_per_byte": 67.01462512500001
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 6.535521536,
+          "dec_energy_uj": 6.668414208000001,
+          "enc_energy_nj_per_byte": 51.058762
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 57.18581344,
+          "dec_energy_uj": 58.348624320000006,
+          "enc_energy_nj_per_byte": 446.7641675
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 256,
+      "enc_time_us": 453.681035,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 2.6948653479000004,
+          "dec_energy_uj": 2.6648936226,
+          "enc_energy_nj_per_byte": 10.526817765234377
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 15.243682776000002,
+          "dec_energy_uj": 15.074145744,
+          "enc_energy_nj_per_byte": 59.545635843750006
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 11.614234496000002,
+          "dec_energy_uj": 11.485063424,
+          "enc_energy_nj_per_byte": 45.368103500000004
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 101.62455184,
+          "dec_energy_uj": 100.49430496,
+          "enc_energy_nj_per_byte": 396.970905625
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 512,
+      "enc_time_us": 841.216105,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 4.9968236637,
+          "dec_energy_uj": 4.942886711400001,
+          "enc_energy_nj_per_byte": 9.759421218164062
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 28.264861128,
+          "dec_energy_uj": 27.959763216,
+          "enc_energy_nj_per_byte": 55.204806890625
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 21.535132288,
+          "dec_energy_uj": 21.302676736000002,
+          "enc_energy_nj_per_byte": 42.06080525
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 188.43240752,
+          "dec_energy_uj": 186.39842144,
+          "enc_energy_nj_per_byte": 368.0320459375
+        }
+      }
+    }
+  ],
+  "TinyJAMBU-128": [
+    {
+      "ad_size": 8,
+      "pt_size": 16,
+      "enc_time_us": 173.24245,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 1.029060153,
+          "dec_energy_uj": 1.0165000527,
+          "enc_energy_nj_per_byte": 64.31625956250001
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 5.82094632,
+          "dec_energy_uj": 5.749899288000001,
+          "enc_energy_nj_per_byte": 363.809145
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 4.4350067200000005,
+          "dec_energy_uj": 4.380875648,
+          "enc_energy_nj_per_byte": 277.18792
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 38.8063088,
+          "dec_energy_uj": 38.33266192000001,
+          "enc_energy_nj_per_byte": 2425.3943
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 32,
+      "enc_time_us": 241.689,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 1.43563266,
+          "dec_energy_uj": 1.447819758,
+          "enc_energy_nj_per_byte": 44.863520625
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 8.1207504,
+          "dec_energy_uj": 8.18968752,
+          "enc_energy_nj_per_byte": 253.77345000000003
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 6.1872384,
+          "dec_energy_uj": 6.239761920000001,
+          "enc_energy_nj_per_byte": 193.3512
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 54.138335999999995,
+          "dec_energy_uj": 54.5979168,
+          "enc_energy_nj_per_byte": 1691.8229999999999
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 64,
+      "enc_time_us": 388.028785,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 2.3048909829000004,
+          "dec_energy_uj": 2.3041101699,
+          "enc_energy_nj_per_byte": 36.013921607812506
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 13.037767176000001,
+          "dec_energy_uj": 13.033350456,
+          "enc_energy_nj_per_byte": 203.71511212500002
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 9.933536896000001,
+          "dec_energy_uj": 9.930171776000002,
+          "enc_energy_nj_per_byte": 155.21151400000002
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 86.91844784000001,
+          "dec_energy_uj": 86.88900303999999,
+          "enc_energy_nj_per_byte": 1358.1007475000001
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 128,
+      "enc_time_us": 669.70423,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 3.9780431262000007,
+          "dec_energy_uj": 4.0136019561000005,
+          "enc_energy_nj_per_byte": 31.078461923437505
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 22.502062128000002,
+          "dec_energy_uj": 22.703202984,
+          "enc_energy_nj_per_byte": 175.797360375
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 17.144428288000004,
+          "dec_energy_uj": 17.297678464,
+          "enc_energy_nj_per_byte": 133.94084600000002
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 150.01374752,
+          "dec_energy_uj": 151.35468656,
+          "enc_energy_nj_per_byte": 1171.9824025
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 256,
+      "enc_time_us": 1253.57822,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 7.446254626800002,
+          "dec_energy_uj": 7.4319011811,
+          "enc_energy_nj_per_byte": 29.086932135937506
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 42.120228192,
+          "dec_energy_uj": 42.039036984,
+          "enc_energy_nj_per_byte": 164.532141375
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 32.091602432,
+          "dec_energy_uj": 32.029742464,
+          "enc_energy_nj_per_byte": 125.35782200000001
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 280.80152128000003,
+          "dec_energy_uj": 280.26024656,
+          "enc_energy_nj_per_byte": 1096.8809425000002
+        }
+      }
+    },
+    {
+      "ad_size": 8,
+      "pt_size": 512,
+      "enc_time_us": 2359.804485,
+      "mcu_energy": {
+        "ATmega328P (8-bit, 16MHz)": {
+          "enc_energy_uj": 14.0172386409,
+          "dec_energy_uj": 14.2616156166,
+          "enc_energy_nj_per_byte": 27.377419220507814
+        },
+        "Cortex-M3 (32-bit, 84MHz)": {
+          "enc_energy_uj": 79.28943069600001,
+          "dec_energy_uj": 80.671765104,
+          "enc_energy_nj_per_byte": 154.86216932812502
+        },
+        "Cortex-M4 (32-bit, 64MHz)": {
+          "enc_energy_uj": 60.410994816000006,
+          "dec_energy_uj": 61.464201984,
+          "enc_energy_nj_per_byte": 117.99022425000001
+        },
+        "ESP32 (32-bit, 240MHz)": {
+          "enc_energy_uj": 528.59620464,
+          "dec_energy_uj": 537.81176736,
+          "enc_energy_nj_per_byte": 1032.4144621875
+        }
+      }
+    }
+  ]
+}

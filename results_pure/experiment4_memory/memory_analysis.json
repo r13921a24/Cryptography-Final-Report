@@ -1,0 +1,60 @@
+{
+  "AES-128-GCM": {
+    "internal_state_bits": 512,
+    "internal_state_bytes": 64,
+    "breakdown": {
+      "cipher_state": "128 bits (AES block)",
+      "key_schedule": "176 bits (AES-128 expanded key = 11 round keys \u00d7 128 bits, but typically stored as 176 bytes)",
+      "gcm_state": "128 bits (counter) + 128 bits (GHASH accumulator) + 128 bits (hash key H)",
+      "s_box_table": "2048 bytes (256 \u00d7 8-bit S-box lookup)",
+      "t_tables": "4096 bytes (optional, for fast software implementation)",
+      "ghash_tables": "2048 bytes (optional, Shoup's 8-bit table for GHASH)"
+    },
+    "lookup_tables_bytes": 8192,
+    "total_estimated_ram_bytes": "~60-100 bytes (state + counter + key schedule on stack)",
+    "total_estimated_rom_bytes": "~4096-8192 bytes (with lookup tables)",
+    "nist_ir8454_data": {
+      "avr_ram": "~200+ bytes",
+      "avr_flash": "~4000-8000 bytes (with T-tables)"
+    }
+  },
+  "ASCON-128": {
+    "internal_state_bits": 320,
+    "internal_state_bytes": 40,
+    "breakdown": {
+      "state_registers": "320 bits (5 \u00d7 64-bit words: x0..x4)",
+      "rate": "64 bits (x0)",
+      "capacity": "256 bits (x1..x4)",
+      "key_storage": "128 bits (during operation)",
+      "lookup_tables": "0 bytes (bit-sliced S-box, no tables)",
+      "round_constants": "16 bytes (round constants array)"
+    },
+    "lookup_tables_bytes": 0,
+    "total_estimated_ram_bytes": "~40-80 bytes (state + key copy + control variables)",
+    "total_estimated_rom_bytes": "~1000-2000 bytes",
+    "nist_ir8454_data": {
+      "avr_flash": "~1100-2000 bytes",
+      "cortex_m3_flash": "~900-1800 bytes"
+    }
+  },
+  "TinyJAMBU-128": {
+    "internal_state_bits": 128,
+    "internal_state_bytes": 16,
+    "breakdown": {
+      "state_nlfsr": "128 bits (smallest among all NIST LWC finalists)",
+      "key_storage": "128 bits (no key schedule)",
+      "nonce": "96 bits",
+      "tag": "64 bits",
+      "lookup_tables": "0 bytes (single NAND gate, no tables)",
+      "nand_feedback": "6 state bits + 1 key bit per round"
+    },
+    "lookup_tables_bytes": 0,
+    "total_estimated_ram_bytes": "~16-32 bytes",
+    "total_estimated_rom_bytes": "~500-1000 bytes",
+    "nist_ir8454_data": {
+      "avr_ram": "117 bytes (Watanabe et al., NIST IR 8454)",
+      "cortex_m3_ram": "140 bytes",
+      "avr_flash": "~600-1200 bytes"
+    }
+  }
+}

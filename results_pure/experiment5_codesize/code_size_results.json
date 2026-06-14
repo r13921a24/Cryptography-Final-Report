@@ -1,0 +1,51 @@
+{
+  "source_code_analysis": {
+    "AES-128-GCM": {
+      "filename": "aes_gcm.py",
+      "file_size_bytes": 3012,
+      "total_lines": 101,
+      "sloc": 66,
+      "pyc_size_bytes": 4415,
+      "comment_blank_lines": 35
+    },
+    "ASCON-128": {
+      "filename": "ascon_aead.py",
+      "file_size_bytes": 7761,
+      "total_lines": 262,
+      "sloc": 184,
+      "pyc_size_bytes": 8839,
+      "comment_blank_lines": 78
+    },
+    "TinyJAMBU-128": {
+      "filename": "tinyjambu.py",
+      "file_size_bytes": 8885,
+      "total_lines": 283,
+      "sloc": 170,
+      "pyc_size_bytes": 9919,
+      "comment_blank_lines": 113
+    }
+  },
+  "rom_estimates": {
+    "AES-128-GCM": {
+      "core_algorithm_rom": "~2000-4000 bytes (AES encrypt/decrypt + GCM mode)",
+      "lookup_tables": "~4096-8192 bytes (T-tables + S-box + GHASH tables)",
+      "total_estimated_rom": "~6000-12000 bytes",
+      "lines_of_c_code": "~500-1000 (optimized)",
+      "nist_ir8454_ref": "See NIST IR 8454 Appendix B, Figures 5-6"
+    },
+    "ASCON-128": {
+      "core_algorithm_rom": "~1000-2000 bytes (permutation + AEAD mode)",
+      "lookup_tables": "~16 bytes (round constants only)",
+      "total_estimated_rom": "~1000-2000 bytes",
+      "lines_of_c_code": "~200-400 (reference implementation)",
+      "nist_ir8454_ref": "Smallest among finalists on most platforms (IR 8454 Fig 5)"
+    },
+    "TinyJAMBU-128": {
+      "core_algorithm_rom": "~500-1000 bytes (NLFSR update + AEAD mode)",
+      "lookup_tables": "0 bytes (no tables)",
+      "total_estimated_rom": "~500-1000 bytes",
+      "lines_of_c_code": "~150-300 (reference implementation)",
+      "nist_ir8454_ref": "117B RAM on AVR, ~600B flash (Watanabe et al.)"
+    }
+  }
+}

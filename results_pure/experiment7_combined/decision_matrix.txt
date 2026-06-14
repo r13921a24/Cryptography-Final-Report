@@ -1,0 +1,33 @@
+
+DEPLOYMENT DECISION MATRIX
+===========================
+Based on NIST IR 8454 framework and experimental results
+
+┌─────────────────────────────┬──────────────────┬───────────────────┬────────────────────┐
+│ Edge Hardware Profile       │ Recommended      │ Rationale         │ Key Metrics        │
+├─────────────────────────────┼──────────────────┼───────────────────┼────────────────────┤
+│ High-end Gateway            │ AES-128-GCM      │ Hardware AES-NI   │ Throughput: High   │
+│ (Cortex-A, x86, AES-NI)     │ (maintain)       │ acceleration      │ Energy: Low (HW)   │
+│                             │                  │ Legacy compat.    │ RAM: Not limiting  │
+├─────────────────────────────┼──────────────────┼───────────────────┼────────────────────┤
+│ Mainstream IoT MCU          │ ASCON-128        │ NIST SP 800-232   │ Throughput: Best   │
+│ (Cortex-M0/M3/M4, RISC-V)   │ (MIGRATE)        │ official standard │ RAM: ~40-80B       │
+│ 10s KB SRAM, pure software  │                  │ No lookup tables  │ ROM: ~1-2KB        │
+│                             │                  │ Little-endian     │ Energy: Lowest     │
+├─────────────────────────────┼──────────────────┼───────────────────┼────────────────────┤
+│ Extreme Constrained Node    │ TinyJAMBU-128 v2 │ 128-bit state     │ Throughput: Good   │
+│ (8-bit AVR, RFID, <4KB SRAM)│ (ADOPT)          │ 117B RAM on AVR   │ RAM: ~16-32B       │
+│ Energy harvesting sensors   │                  │ 640-round v2      │ ROM: ~500-1000B    │
+│                             │                  │ NAND-only logic   │ Init: 1024 rounds  │
+└─────────────────────────────┴──────────────────┴───────────────────┴────────────────────┘
+
+KEY FINDINGS:
+1. ASCON-128 achieves the best overall balance across all metrics
+2. AES-128-GCM is only competitive with hardware acceleration
+3. TinyJAMBU-128 dominates in memory-constrained scenarios
+4. For short packets (16-32B), ASCON's low init cost gives 3-5x advantage over AES-GCM
+5. ASCON's bit-sliced S-box eliminates cache-timing side-channel vulnerability
+
+REFERENCE:
+- NIST SP 800-232: Ascon-Based Lightweight Cryptography Standards
+- NIST IR 8454: Status Report on the Final Round of NIST LWC Standardization

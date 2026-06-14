@@ -1,0 +1,63 @@
+Memory Footprint Analysis
+================================================================================
+
+--- AES-128-GCM ---
+  Internal state size: 512 bits (64 bytes)
+  Lookup tables: 8192 bytes
+  Estimated RAM: ~60-100 bytes (state + counter + key schedule on stack)
+  Estimated ROM: ~4096-8192 bytes (with lookup tables)
+  Breakdown:
+    - cipher_state: 128 bits (AES block)
+    - key_schedule: 176 bits (AES-128 expanded key = 11 round keys × 128 bits, but typically stored as 176 bytes)
+    - gcm_state: 128 bits (counter) + 128 bits (GHASH accumulator) + 128 bits (hash key H)
+    - s_box_table: 2048 bytes (256 × 8-bit S-box lookup)
+    - t_tables: 4096 bytes (optional, for fast software implementation)
+    - ghash_tables: 2048 bytes (optional, Shoup's 8-bit table for GHASH)
+
+--- ASCON-128 ---
+  Internal state size: 320 bits (40 bytes)
+  Lookup tables: 0 bytes
+  Estimated RAM: ~40-80 bytes (state + key copy + control variables)
+  Estimated ROM: ~1000-2000 bytes
+  Breakdown:
+    - state_registers: 320 bits (5 × 64-bit words: x0..x4)
+    - rate: 64 bits (x0)
+    - capacity: 256 bits (x1..x4)
+    - key_storage: 128 bits (during operation)
+    - lookup_tables: 0 bytes (bit-sliced S-box, no tables)
+    - round_constants: 16 bytes (round constants array)
+
+--- TinyJAMBU-128 ---
+  Internal state size: 128 bits (16 bytes)
+  Lookup tables: 0 bytes
+  Estimated RAM: ~16-32 bytes
+  Estimated ROM: ~500-1000 bytes
+  Breakdown:
+    - state_nlfsr: 128 bits (smallest among all NIST LWC finalists)
+    - key_storage: 128 bits (no key schedule)
+    - nonce: 96 bits
+    - tag: 64 bits
+    - lookup_tables: 0 bytes (single NAND gate, no tables)
+    - nand_feedback: 6 state bits + 1 key bit per round
+
+
+Memory Comparison Summary
+--------------------------------------------------------------------------------
+Metric                                AES-128-GCM          ASCON-128      TinyJAMBU-128
+--------------------------------------------------------------------------------
+Internal State (bits)                         512                320                128
+Lookup Tables (bytes)                        8192                  0                  0
+--------------------------------------------------------------------------------
+
+NIST IR 8454 Reference Data (MCU measurements)
+--------------------------------------------------------------------------------
+  AES-128-GCM:
+    avr_ram: ~200+ bytes
+    avr_flash: ~4000-8000 bytes (with T-tables)
+  ASCON-128:
+    avr_flash: ~1100-2000 bytes
+    cortex_m3_flash: ~900-1800 bytes
+  TinyJAMBU-128:
+    avr_ram: 117 bytes (Watanabe et al., NIST IR 8454)
+    cortex_m3_ram: 140 bytes
+    avr_flash: ~600-1200 bytes

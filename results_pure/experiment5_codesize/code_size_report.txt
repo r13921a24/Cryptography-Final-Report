@@ -1,0 +1,40 @@
+Code Size Analysis
+================================================================================
+
+Python Source Code Metrics
+--------------------------------------------------------------------------------
+Algorithm             File Size  Total Lines     SLOC    .pyc Size    Density
+--------------------------------------------------------------------------------
+AES-128-GCM                3012          101       66         4415      65.3%
+ASCON-128                  7761          262      184         8839      70.2%
+TinyJAMBU-128              8885          283      170         9919      60.1%
+
+Estimated MCU ROM/Flash Requirements
+--------------------------------------------------------------------------------
+  AES-128-GCM:
+    core_algorithm_rom: ~2000-4000 bytes (AES encrypt/decrypt + GCM mode)
+    lookup_tables: ~4096-8192 bytes (T-tables + S-box + GHASH tables)
+    total_estimated_rom: ~6000-12000 bytes
+    lines_of_c_code: ~500-1000 (optimized)
+    nist_ir8454_ref: See NIST IR 8454 Appendix B, Figures 5-6
+
+  ASCON-128:
+    core_algorithm_rom: ~1000-2000 bytes (permutation + AEAD mode)
+    lookup_tables: ~16 bytes (round constants only)
+    total_estimated_rom: ~1000-2000 bytes
+    lines_of_c_code: ~200-400 (reference implementation)
+    nist_ir8454_ref: Smallest among finalists on most platforms (IR 8454 Fig 5)
+
+  TinyJAMBU-128:
+    core_algorithm_rom: ~500-1000 bytes (NLFSR update + AEAD mode)
+    lookup_tables: 0 bytes (no tables)
+    total_estimated_rom: ~500-1000 bytes
+    lines_of_c_code: ~150-300 (reference implementation)
+    nist_ir8454_ref: 117B RAM on AVR, ~600B flash (Watanabe et al.)
+
+
+Code Size Comparison (Python SLOC)
+----------------------------------------
+  ASCON-128            ################################################## 184 SLOC
+  TinyJAMBU-128        ############################################## 170 SLOC
+  AES-128-GCM          ################# 66 SLOC
