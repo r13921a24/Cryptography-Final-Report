@@ -238,7 +238,7 @@ The rate and capacity of Ascon-AEAD128 are $r = 128$ bits and $c = 192$ bits, re
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{figures/ascon_enc.PNG}
+\includegraphics[width=1\textwidth]{ascon_enc.PNG}
 \caption{Ascon-AEAD128 encryption}
 \label{fig:ascon_encryption}
 \end{figure}
@@ -318,7 +318,7 @@ The 128-bit state of the NLFSR is a bit vector $S = (s_0, s_1, \ldots, s_{127}) 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.85\textwidth]{figures/tinyjambu_NLFSR.PNG}
+\includegraphics[width=0.85\textwidth]{tinyjambu_NLFSR.PNG}
 \caption{The 128-bit nonlinear feedback shift register (NLFSR) in TinyJAMBU. Six tap positions feed into an XOR tree combined with a NAND gate and a key bit to produce the feedback bit inserted at position 127.}
 \label{fig:tj_nlfsr}
 \end{figure}
@@ -478,7 +478,7 @@ All three implementations passed 28 KAT vectors covering empty inputs, single-by
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.85\textwidth]{figures/throughput_curve.png}
+\includegraphics[width=0.85\textwidth]{throughput_curve.png}
 \caption{Encryption throughput comparison (all pure-Python, AD = 8 bytes).}
 \label{fig:throughput}
 \end{figure}
@@ -667,5 +667,24 @@ K.~Kim and S.~Choi, ``PAGE---Practical AES-GCM Encryption for Low-End Microcontr
 A.~Roy, ``TinyJAMBU: Optimized C++ Implementation with FBK\_32 State Update,'' \emph{GitHub}, 2023. \url{https://github.com/itzmeanjan/tinyjambu}
 
 \end{thebibliography}
+
+%=====================================================================
+\appendix
+\section{Code Availability}
+%=====================================================================
+
+The complete source code, benchmark harness, experimental results, and compiler-bias evidence are publicly available at:
+
+\begin{center}
+\url{https://github.com/r13921a24/Cryptography-Final-Report}
+\end{center}
+
+The repository is organized into three main directories:
+
+\begin{itemize}[leftmargin=*]
+    \item \texttt{experiments/} --- Pure-Python implementations of all three AEAD algorithms (\texttt{aes\_gcm\_pure.py}, \texttt{ascon\_aead.py}, \texttt{tinyjambu.py}) and the full benchmark suite (\texttt{benchmark.py}, \texttt{energy\_estimate.py}, \texttt{kat\_verify.py}, \texttt{code\_size.py}, \texttt{memory\_profile.py}, \texttt{visualize.py}, \texttt{run\_all.py}). All algorithms are implemented at the same abstraction level for fair comparison.
+    \item \texttt{c\_bench/} --- C-language benchmarks (\texttt{bench.c}, \texttt{bench\_edge.c}, \texttt{bench\_nosimd.c}) with assembly listings at {\tt -O0} and {\tt -O3} optimization levels, demonstrating that GCC auto-vectorizes the AES S-box lookup via SSE {\tt movdqa} instructions (13.3$\times$ speedup) while providing only 2.7$\times$ benefit to TinyJAMBU's NLFSR.
+    \item \texttt{results\_pure/} --- Complete experimental outputs from all seven experiments in JSON and plain-text formats, including KAT verification reports, throughput measurements, initialization cost analysis, memory footprint estimates, code size metrics, energy consumption estimates, and generated comparison charts (300~DPI PNG).
+\end{itemize}
 
 \end{document}
